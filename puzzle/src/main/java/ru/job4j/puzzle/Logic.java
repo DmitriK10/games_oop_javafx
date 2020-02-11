@@ -91,8 +91,6 @@ public class Logic {
                 if (result == true) {
                     break;
                 }
-                vFlag = 0;
-                //table[index] = table[index + i];
             }
         }
             //System.out.print(table[index] + " ");
