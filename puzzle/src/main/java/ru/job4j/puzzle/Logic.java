@@ -39,6 +39,7 @@ public class Logic {
         return rst;
     }
 
+    /** @noinspection checkstyle:NoWhitespaceBefore*/
     public boolean isFree(Cell ... cells) {
         boolean result = cells.length > 0;
         for (Cell cell : cells) {
@@ -71,6 +72,7 @@ public class Logic {
     public boolean isWin() {
         int[][] table = this.convert();
         boolean result = false;
+
         int vFlag = 0;
         int hFlag = 0;
         for (int index = 0; index < table.length; index++) {
@@ -87,7 +89,7 @@ public class Logic {
                     }
 
                 }
-                if (result == true) {
+                if (result) {
                     break;
                 }
             }
