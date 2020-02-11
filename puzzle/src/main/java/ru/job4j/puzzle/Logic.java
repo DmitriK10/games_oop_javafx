@@ -6,7 +6,7 @@ import ru.job4j.puzzle.firuges.Figure;
 import java.util.Arrays;
 
 /**
- * //TODO add comments.
+ * //Сокобан. проверка наступления выигрыша или проигпыша.
  *
  * @author Petr Arsentev (parsentev@yandex.ru)
  * @version $Id$
@@ -71,6 +71,54 @@ public class Logic {
     public boolean isWin() {
         int[][] table = this.convert();
         boolean result = false;
+
+        int vFlag = 0;
+        int hFlag = 0;
+        for (int index = 0; index < table.length; index++) {
+            if (table[index][0] == 1) {
+                hFlag++;
+                vFlag = 0;
+                for (int y = 0; y < table.length; y++) {
+                    if (table[index][y] == 1) {
+                        vFlag++;
+                    }
+                    if (vFlag == 5) {
+                        result = true;
+                        break;
+                    }
+
+                }
+                if (result == true) {
+                    break;
+                }
+                vFlag = 0;
+                //table[index] = table[index + i];
+            }
+        }
+            //System.out.print(table[index] + " ");
+
+
+        /*for (int i = 0; i < table.length; i++) {
+            if (table[i][i] == 1) {
+            if (table[i][i] == 1) {
+                boolean flag = table[i][0] == 1;
+                for (int j = 0; j < table.length; j++) {
+                    if (flag) {
+                        if (table[i][j] != 1) {
+                            break;
+                        }
+                    } else {
+                        if (table[j][i] != 1) {
+                            break;
+                        }
+                    }
+                    if (j == table.length - 1) {
+                        result = true;
+                    }
+                }
+
+            }
+        }*/
         return result;
     }
 
