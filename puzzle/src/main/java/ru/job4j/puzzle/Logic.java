@@ -93,30 +93,7 @@ public class Logic {
                 }
             }
         }
-            //System.out.print(table[index] + " ");
 
-
-        /*for (int i = 0; i < table.length; i++) {
-            if (table[i][i] == 1) {
-            if (table[i][i] == 1) {
-                boolean flag = table[i][0] == 1;
-                for (int j = 0; j < table.length; j++) {
-                    if (flag) {
-                        if (table[i][j] != 1) {
-                            break;
-                        }
-                    } else {
-                        if (table[j][i] != 1) {
-                            break;
-                        }
-                    }
-                    if (j == table.length - 1) {
-                        result = true;
-                    }
-                }
-
-            }
-        }*/
         return result;
     }
 
