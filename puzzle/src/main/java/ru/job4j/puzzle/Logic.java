@@ -93,7 +93,6 @@ public class Logic {
                 }
             }
         }
-
         return result;
     }
 
