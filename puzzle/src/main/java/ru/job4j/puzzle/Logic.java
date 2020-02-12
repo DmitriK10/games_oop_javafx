@@ -92,9 +92,6 @@ public class Logic {
                     result = true;
                     break;
                 }
-                /*if (result) {
-                    break;
-                }*/
             }
         }
         return result;
