@@ -82,13 +82,13 @@ public class Logic {
                     if (table[index][y] == 1) {
                         vFlag++;
                     }
-                    if (vFlag == 5) {
+                    if (vFlag == table.length - 1) {
                         result = true;
                         break;
                     }
 
                 }
-                if (hFlag == 5) {
+                if (hFlag == table.length - 1) {
                     result = true;
                     break;
                 }
