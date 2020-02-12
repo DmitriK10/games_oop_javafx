@@ -40,7 +40,7 @@ public class Logic {
     }
 
     /** @noinspection checkstyle:NoWhitespaceBefore*/
-    public boolean isFree(Cell ... cells) {
+    public boolean isFree(Cell... cells) {
         boolean result = cells.length > 0;
         for (Cell cell : cells) {
             if (this.findBy(cell) != -1) {
@@ -88,9 +88,13 @@ public class Logic {
                     }
 
                 }
-                if (result) {
+                if (hFlag == 5) {
+                    result = true;
                     break;
                 }
+                /*if (result) {
+                    break;
+                }*/
             }
         }
         return result;
