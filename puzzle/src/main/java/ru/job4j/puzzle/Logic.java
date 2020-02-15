@@ -44,8 +44,8 @@ public class Logic {
         boolean result = cells.length > 0;
         for (Cell cell : cells) {
             if (this.findBy(cell) != -1) {
-               result = false;
-               break;
+                result = false;
+                break;
             }
         }
         return result;
@@ -75,20 +75,15 @@ public class Logic {
         int vFlag = 0;
         int hFlag = 0;
         for (int index = 0; index < table.length; index++) {
-            if (table[index][0] == 1) {
+            if (table[index][index] == 1) {
                 hFlag++;
                 vFlag = 0;
                 for (int y = 0; y < table.length; y++) {
                     if (table[index][y] == 1) {
                         vFlag++;
                     }
-                    if (vFlag == table.length - 1) {
-                        result = true;
-                        break;
-                    }
-
                 }
-                if (hFlag == table.length - 1) {
+                if (hFlag == table.length || vFlag == table.length) {
                     result = true;
                     break;
                 }

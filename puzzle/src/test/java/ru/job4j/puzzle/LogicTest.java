@@ -77,16 +77,16 @@ public class LogicTest {
     }
 
     @Test
-    public void whenNotWin2() {
+    public void whenVerticalWin2() {
         Logic logic = new Logic(5) {
             @Override
             public int[][] convert() {
                 return new int[][] {
-                        {0, 0, 0, 0, 0},
-                        {0, 1, 0, 0, 0},
+                        {0, 0, 0, 0, 1},
+                        {0, 1, 0, 0, 1},
                         {0, 1, 1, 1, 1},
-                        {0, 1, 0, 1, 0},
-                        {1, 1, 1, 1, 1},
+                        {0, 1, 0, 1, 1},
+                        {1, 1, 1, 0, 1},
                 };
             }
         };
