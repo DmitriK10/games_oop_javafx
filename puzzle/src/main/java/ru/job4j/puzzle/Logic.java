@@ -76,8 +76,13 @@ public class Logic {
         int hFlag = 0;
         for (int index = 0; index < table.length; index++) {
             if (table[index][index] == 1) {
-                hFlag++;
+                hFlag = 0;
                 vFlag = 0;
+                for (int x = 0; x < table.length; x++) {
+                    if (table[x][index] == 1) {
+                        hFlag++;
+                    }
+                }
                 for (int y = 0; y < table.length; y++) {
                     if (table[index][y] == 1) {
                         vFlag++;
