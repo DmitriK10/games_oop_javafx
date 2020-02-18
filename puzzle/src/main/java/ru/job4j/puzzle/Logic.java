@@ -82,9 +82,7 @@ public class Logic {
                     if (table[x][index] == 1) {
                         hFlag++;
                     }
-                }
-                for (int y = 0; y < table.length; y++) {
-                    if (table[index][y] == 1) {
+                    if (table[index][x] == 1) {
                         vFlag++;
                     }
                 }
